@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif
+}
+.card {
+	color:#fff;
+    width: 350px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #c00000, #5c0000);
+    box-shadow:  25px 25px 70px #750000,-25px -25px 50px #610000;
+    border: none
+}
+.num{
+	
+	color:#eee !important;
+}
+
+.line{
+	color:#fff;
+}
+
+.neo-button:active {
+    border-radius: 50%;
+    background: #AB47BC;
+    box-shadow:  28px 28px 57px #933da2,-28px -28px 57px #c351d6;
+}
+
+.fa-instagram {
+    padding-left: 7%;
+    color: #3b5998
+}
+
+.fa-linkedin {
+    padding-left: 7%;
+    color: #0077b5
+}
+
+.fa-google {
+    padding-left: 7%;
+    color: #dc4e41
+}
+
+.fa-youtube {
+    padding-left: 7%;
+    color: #cd201f
+}
+
+.fa-github { 
+    padding-left: 7%;
+    color: #ffffff
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url(image/32998963_947983147283.jpg);
+}
+
+.glow-button {
+    width: 250px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+
+}
+
+.glow-button:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-button:active {
+    color: #000
+}
+
+.glow-button:active:after {
+    background: transparent;
+}
+
+.glow-button:hover:before {
+    opacity: 1;
+}
+
+.glow-button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
